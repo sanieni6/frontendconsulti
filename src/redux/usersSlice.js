@@ -13,6 +13,7 @@ export const getUsers = createAsyncThunk(
       const state = getState();
       const url = index;
       const headers = { Accept: 'application/json', Authorization: state.admin.jwt };
+      console.log(headers);
       const { status, data, message } = await axios.get(url, { headers }).catch((error) => error);
   
       if (status === 200) {
