@@ -11,7 +11,7 @@ const NavigationLink = ({ label, path }) => {
   //if ((label === 'Users') && !isAdmin) return null;
 
   // Validate if the user is not logged in to display just Home and Login links
-  //if ((label !== 'Home' && label !== 'Login') && !admin) return null;
+  if ((label !== 'Home' && label !== 'Login') && !admin) return null;
 
   // Validate if the user is logged in to hide Login link
   if (label === 'Login' && admin) return null;
